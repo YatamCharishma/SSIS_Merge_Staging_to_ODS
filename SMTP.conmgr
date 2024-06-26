@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="SMTP"
+  DTS:DTSID="{D73770A1-97E2-4896-B104-189212492AE8}"
+  DTS:Description="Email Server"
+  DTS:CreationName="SMTP">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::SMTP_ConnectionString]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <SmtpConnectionManager
+      ConnectionString="SmtpServer=mailrouter.wabtec.com;UseWindowsAuthentication=False;EnableSsl=False;"
+      ConnectByProxy="False" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
